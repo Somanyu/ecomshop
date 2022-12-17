@@ -4,7 +4,7 @@ function About() {
     return (
         <>
             <Navbar />
-            <div className="flex justify-center mt-28 font-inter">
+            <div className="flex justify-center pt-28 font-inter">
                 <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
                     <form className="space-y-6" action="#">
                         <h5 className="text-xl font-medium text-gray-900 dark:text-white font-karla">Sign in to our platform</h5>

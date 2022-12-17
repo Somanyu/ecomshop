@@ -5,7 +5,7 @@ const Home = () => {
         <div>
             <Navbar />
 
-            <div className="overflow-x-auto relative mt-28 p-7 font-inter">
+            <div className="overflow-x-auto relative pt-28 p-7 font-inter">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
