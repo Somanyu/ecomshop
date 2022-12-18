@@ -5,7 +5,7 @@ import mockup from "../images/mockup-1.png"
 const Home = () => {
     return (
         <div>
-            <Navbar />
+            <Navbar authLink={"/signup"} authType={'Sign Up'}/>
 
             <section class="bg-white dark:bg-gray-900 pt-28">
                 <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
