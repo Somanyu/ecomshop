@@ -1,7 +1,26 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { BsEye, BsEyeSlash } from 'react-icons/bs'
+import { useState } from "react";
 
 function SignUp() {
+
+    const [passwordType, setPasswordType] = useState("password")
+    const [passwordInput, setPasswordInput] = useState("")
+
+    const handlePasswordChange = (event) => {
+        setPasswordInput(event.target.value)
+    }
+    const togglePassword = () => {
+        if (passwordType === "password") {
+            setPasswordType("text")
+            return
+        } else {
+            setPasswordType("password")
+        }
+    }
+
+
     return (
         <>
             <div className="pt-28 pb-28 flex justify-center content-center">
@@ -16,7 +35,23 @@ function SignUp() {
                         </div>
                         <div>
                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                            <div class="relative">
+                                <input
+                                    onChange={handlePasswordChange}
+                                    type={passwordType}
+                                    value={passwordInput}
+                                    name="password"
+                                    id="password"
+                                    placeholder="••••••••"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required
+                                />
+                                <div
+                                    onClick={togglePassword}
+                                    class="text-white absolute right-2.5 bottom-2 font-medium rounded-lg text-lg px-4 py-1">
+                                    {passwordType === "password" ? <BsEye /> : <BsEyeSlash />}
+
+                                </div>
+                            </div>
                         </div>
                         <div class="flex items-start mb-6">
                             <div class="flex items-center h-5">
